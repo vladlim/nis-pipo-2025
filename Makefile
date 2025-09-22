@@ -1,5 +1,5 @@
 # Имя бинарного файла
-BINARY_NAME=hello
+BINARY_NAME=main
 # Директория для собранных бинарников
 BIN_DIR=bin
 
