@@ -20,8 +20,7 @@ jobs:
 
       - name: Build
         run: make build
-
-      - uses: actions/upload-artifacts@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: Build binary
+          name: Build main
           path: bin/main
