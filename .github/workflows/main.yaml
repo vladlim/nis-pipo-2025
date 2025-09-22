@@ -19,8 +19,10 @@ jobs:
           go-version: "1.21"
 
       - name: Build
+        env:
+          BUILD_NUMBER: ${{github.run_id}}
         run: make build
       - uses: actions/upload-artifact@v4
         with:
           name: Build main
-          path: bin/main
+          path: bin/main*

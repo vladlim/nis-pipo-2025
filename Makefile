@@ -3,14 +3,18 @@ BINARY_NAME=main
 # Директория для собранных бинарников
 BIN_DIR=bin
 
+# Версия сборки
+APP_VERSION?=1.0.0
+BUILD_NUMBER?=0
+
 # Цель по умолчанию
 .DEFAULT_GOAL := build
 
 # Сборка проекта
 build:
-	@echo "Building..."
+	@echo "Building version $(APP_VERSION), build $(BUILD_NUMBER)..."
 	@go build -o $(BIN_DIR)/$(BINARY_NAME) cmd/main.go
-	@echo "Build complete: $(BIN_DIR)/$(BINARY_NAME)"
+	@echo "Build complete: $(BIN_DIR)/$(BINARY_NAME) v$(APP_VERSION)"
 
 # Запуск программы
 run:
